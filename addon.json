@@ -1,0 +1,13 @@
+{
+    "display_name": "Field Autocomplete",
+    "module_name": "field-autocomplete",
+    "repo_name": "anki-field-autocomplete",
+    "ankiweb_id": "",
+    "author": "RisingOrange",
+    "conflicts": [],
+    "targets": [
+        "anki21"
+    ],
+    "min_anki_version" : "2.1.45",
+    "max_tested_anki_version" : "2.1.46"
+}

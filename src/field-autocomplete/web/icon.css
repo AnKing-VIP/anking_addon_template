@@ -1,0 +1,20 @@
+:root {
+    --lime: invert(74%) sepia(60%) saturate(1880%) hue-rotate(40deg) brightness(105%) contrast(107%);
+}
+
+.ac-icon {
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-top: 3px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-image: url('../icons/a.png');
+}
+
+.enabled {
+    filter: var(--lime);
+}
+

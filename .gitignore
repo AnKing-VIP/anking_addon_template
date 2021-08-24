@@ -1,0 +1,12 @@
+build/
+tools/
+profile/
+meta.json
+
+src/*/gui/forms/anki*
+src/*/gui/resources/anki*
+
+__pycache__/
+
+.vscode/
+*.code-workspace
