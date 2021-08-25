@@ -4,14 +4,16 @@ You must be on Anki *** to use this add-on
 
 *** Add-on description
 
-<div><b>Screenshots</b><div>
+<div><b>Screenshots</b></div>
 <img src="https://raw.githubusercontent.com/ankipalace/anki-field-autocomplete/master/screenshots/dropdown.gif?raw=true">
-<br>
+  <br>
+  <br>
 
 <b>Problems, Bugs, Errors, Improvements</b>
 If you find a serious bug, please submit it on <a href="https://github.com/ankipalace/" rel="nofollow">Github</a> or email us at ankingmed@gmail.com. Please remember that we are not coders and thus may not be able to provide support.
 
 <b>Changelog</b>
+  <br>
 2021***: Initial Release
 
 
