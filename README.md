@@ -30,3 +30,20 @@ If you find a serious bug, please submit it on <a href="https://github.com/ankip
     (The source of funding for this project)</b>
           <a href="https://courses.ankipalace.com/?utm_source=anking_bg_add-on&amp;utm_medium=anki_add-on_page&amp;utm_campaign=mastery_course" rel="nofollow">https://courses.ankipalace.com</a>
 <a href="https://courses.ankipalace.com/?utm_source=anking_bg_add-on&amp;utm_medium=anki_add-on_page&amp;utm_campaign=mastery_course" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/AnKing/AnkiPalace.png?raw=true"></a>
+
+  
+  # Development
+## Setup
+To update icons_rc.py file after changes to [icons.qrc](resources/AnKing/icons.qrc), run the following command, then edit the file to add `-> None` type hint.
+```bash
+pyrcc5 ./src/addon/AnKing/icons.qrc -o ./src/addon/icons_rc.py
+```
+
+## Tests & Formatting
+
+
+# Building ankiaddon file
+
+```
+There is a GitHub command that will run the anki-addon-builder
+```
