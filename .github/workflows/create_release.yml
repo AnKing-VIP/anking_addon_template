@@ -26,7 +26,6 @@ jobs:
         run: |
           python -m pip install git+git://github.com/glutanimate/anki-addon-builder.git@4039b5bb743773a18cb2911e6dd38fa1e3f65982
           python -m pip install pyqt5
-          python -m pip install webbot
           
       - name: setup git config
         run: |
@@ -59,9 +58,3 @@ jobs:
           file: build/${{ steps.vars.outputs.build_name }}
           tag: ${{ github.event.inputs.version }}
           release_name: ${{ steps.vars.outputs.module_name }} v${{ github.event.inputs.version }}
-
-      - name: Upload to AnkiWeb
-        env: 
-          USERNAME: ${{ secrets.ANKIWEB_USERNAME }}
-          PASSWORD: ${{ secrets.ANKIWEB_PASSWORD }}
-        run: python3 .github/workflows/upload_to_ankiweb.py ${{ github.repository_owner }}
