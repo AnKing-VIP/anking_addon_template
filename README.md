@@ -1,39 +1,18 @@
 <b>This add-on was funded by the Anki Palace. Please consider supporting our work using the links below so we can continue to fund add-on projects like this.</b>
 
-You must be on Anki 2.1.45+ to use this add-on
+You must be on Anki *** to use this add-on
 
-This add-on enhances the editor with autocomplete functionality. When you type text in a field or even just click on it a list of values from existing cards will appear. These values will be only from the exact note type and field that you're typing into. The auto-completion makes it easy to fill a field which always takes on one of a set of values (here the autocomplete can be used the same ways as a dropdown menu).
-
-When you click one of the values (or press tab) the field will be set to this option.
-
-The autocomplete feature can be toggled on and off for a field by clicking the "A" icon, or using a keyboard shortcut (F4 by default). The setting will be remembered for the next time you edit such a note.
-
-The search mode can be set to strict (default) or loose in the add-on settings. When using the loose search mode, searching for e.g. "ate" would also bring up "rate", which wouldn't show up in the strict search mode.
-
-This add-on is based on the <a href="https://github.com/acecodes/anki-editor-autocomplete" rel="nofollow">anki-editor-autocomplete</a> add-on.
+*** Add-on description
 
 <div><b>Screenshots</b><div>
 <img src="https://raw.githubusercontent.com/ankipalace/anki-field-autocomplete/master/screenshots/dropdown.gif?raw=true">
 <br>
-<br>
-
-<div><b>strict search (default)</b><div>
-<img src="https://raw.githubusercontent.com/ankipalace/anki-field-autocomplete/master/screenshots/strict_search.gif?raw=true">
-<br>
-<br>
-
-
-<div><b>loose search</b><div>
-<img src="https://raw.githubusercontent.com/ankipalace/anki-field-autocomplete/master/screenshots/loose_search.gif?raw=true">
-<br>
-<br>
 
 <b>Problems, Bugs, Errors, Improvements</b>
-If you find a serious bug, please submit it on <a href="https://github.com/ankipalace/anki-field-autocomplete/issues" rel="nofollow">Github</a> or email us at ankingmed@gmail.com. Please remember that we are not coders and thus may not be able to provide support.
+If you find a serious bug, please submit it on <a href="https://github.com/ankipalace/" rel="nofollow">Github</a> or email us at ankingmed@gmail.com. Please remember that we are not coders and thus may not be able to provide support.
 
 <b>Changelog</b>
-2021-8-17: Initial Release
-2021-8-19: Fixed a bug making it not work on windows
+2021***: Initial Release
 
 
 <b>Please consider checking out our:</b>
