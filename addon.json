@@ -1,9 +1,9 @@
 {
-    "display_name": "Field Autocomplete",
-    "module_name": "field-autocomplete",
-    "repo_name": "anki-field-autocomplete",
+    "display_name": "",
+    "module_name": "",
+    "repo_name": "",
     "ankiweb_id": "",
-    "author": "RisingOrange",
+    "author": "",
     "conflicts": [],
     "targets": [
         "anki21"
