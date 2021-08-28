@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="CustomBackground">
+    <qresource prefix="AnKing">
         <file>AnKingSmall.png</file>
         <file>Facebook.png</file>
         <file>Instagram.png</file>

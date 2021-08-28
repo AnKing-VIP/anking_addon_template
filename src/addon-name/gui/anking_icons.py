@@ -20,7 +20,7 @@ class AnkingIconsHeader(QHBoxLayout):
         ]
         for obj in icon_objs:
             (image, size, url) = obj
-            icon = QIcon(QPixmap(f":/CustomBackground/{image}"))
+            icon = QIcon(QPixmap(f":/AnKing/{image}"))
             button = QToolButton()
             button.setIcon(icon)
             button.setIconSize(QSize(size[0], size[1]))

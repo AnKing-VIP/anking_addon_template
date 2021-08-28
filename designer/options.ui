@@ -99,7 +99,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/icons.qrc">
-           <normaloff>:/CustomBackground/AnkiPalace_no_text.png</normaloff>:/CustomBackground/AnkiPalace_no_text.png</iconset>
+           <normaloff>:/AnKing/AnkiPalace_no_text.png</normaloff>:/AnKing/AnkiPalace_no_text.png</iconset>
          </property>
          <property name="iconSize">
           <size>
