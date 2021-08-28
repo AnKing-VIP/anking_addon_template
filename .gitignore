@@ -7,6 +7,9 @@ src/*/gui/forms/anki*
 src/*/gui/resources/anki*
 
 __pycache__/
+.cache
+.mypy_cache/
+.pytest_cache/
 
 .vscode/
 *.code-workspace
