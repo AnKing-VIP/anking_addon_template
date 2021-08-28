@@ -1,24 +1,18 @@
-from .anking_options import AnkingOptions
+from aqt import mw
+from aqt.qt import *
+from aqt.utils import openLink
+
+from ..config import config
+from ..libaddon.anki import ANKI
+from ..libaddon.gui.dialogs.options import OptionsDialog
 
 
-class FieldACOptions(AnkingOptions):
+from .anking_icons import AnkingIconsHeader
+from .forms.anki21 import options as qtform_options
 
-    action_label = "Field Autocomplete"
 
-    # Anking links submenu options
-    submenu_name = "Get Anki Help"
-    submenu_property = "anking_get_help"
-    submenu_ver = 2
-    addon_name_for_link = "autocomplete"
-    menu_options = [
-        (
-            "Online Mastery Course",
-            f'https://courses.ankipalace.com/?utm_source=anking_{addon_name_for_link}_add-on&utm_medium=anki_add-on&utm_campaign=mastery_course'
-        ),
-        ("Daily Q and A Support", "https://www.ankipalace.com/memberships"),
-        ("1-on-1 Tutoring", "https://www.ankipalace.com/tutoring"),
-    ]
-
+class FieldACOptions(OptionsDialog):
+    addon_name_for_links = "autocomplete"
     mapped_widgets = (
         ("form.checkBox_search_mode",
          (("value", {"dataPath": "synced/loose_search"}),)),
@@ -26,6 +20,33 @@ class FieldACOptions(AnkingOptions):
          (("value", {"dataPath": "profile/hotkeys/toggle"}),)),
     )
 
+    def __init__(self, parent=None, **kwargs):
+        self.parent = parent or mw
+        self.mw = mw
+        super().__init__(self.mapped_widgets, config,
+                         form_module=qtform_options, parent=self.parent, **kwargs)
 
-    def __init__(self, config, mw, parent=None, **kwargs):
-        super().__init__(config, mw, parent, **kwargs)
+    def _setupUI(self):
+        super()._setupUI()
+
+        # manually adjust title label font sizes on Windows
+        # gap between default windows font sizes and sizes that work well
+        # on Linux and macOS is simply too big
+        # TODO: find a better solution
+        if ANKI.PLATFORM == "win":
+            default_size = QApplication.font().pointSize()
+            for label in [self.form.fmtLabContrib, self.form.labHeading]:
+                font = label.font()
+                font.setPointSize(int(default_size * 1.5))
+                label.setFont(font)
+
+        self.anking_icons = AnkingIconsHeader(self.form.AnkingHeader)
+
+    def _setupEvents(self):
+        f = self.form
+        f.toolButton_palace.clicked.connect(lambda _: self.openPalaceLink)
+
+    def openPalaceLink(self):
+        openLink(
+            f'https://courses.ankipalace.com/?utm_source=anking_{self.addon_name_for_links}_add-on&utm_medium=anki_add-on&utm_campaign=mastery_course'
+        )

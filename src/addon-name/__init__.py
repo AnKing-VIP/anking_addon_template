@@ -1,3 +1,3 @@
-from .gui.options import FieldACOptions
+from .gui.menu import setup_menu
 
-FieldACOptions.init()
+setup_menu()
