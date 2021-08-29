@@ -7,12 +7,11 @@ from ..libaddon.anki import ANKI
 from ..libaddon.gui.dialogs.options import OptionsDialog
 
 
-from .anking_icons import AnkingIconsHeader
+from .anking_widgets import AnkingIconsLayout, AnkiPalaceLayout
 from .forms.anki21 import options as qtform_options
 
 
 class FieldACOptions(OptionsDialog):
-    addon_name_for_links = "autocomplete"
     mapped_widgets = (
         ("form.checkBox_search_mode",
          (("value", {"dataPath": "synced/loose_search"}),)),
@@ -40,13 +39,5 @@ class FieldACOptions(OptionsDialog):
                 font.setPointSize(int(default_size * 1.5))
                 label.setFont(font)
 
-        self.anking_icons = AnkingIconsHeader(self.form.AnkingHeader)
-
-    def _setupEvents(self):
-        f = self.form
-        f.toolButton_palace.clicked.connect(lambda _: self.openPalaceLink)
-
-    def openPalaceLink(self):
-        openLink(
-            f'https://courses.ankipalace.com/?utm_source=anking_{self.addon_name_for_links}_add-on&utm_medium=anki_add-on&utm_campaign=mastery_course'
-        )
+        AnkingIconsLayout(self.form.AnkingHeader)
+        AnkiPalaceLayout(self.form.AnkiPalace)
