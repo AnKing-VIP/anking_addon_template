@@ -9,6 +9,7 @@ on:
 
 jobs:
   create-release:
+    name: Version ${{ github.event.inputs.version }}
     runs-on: ubuntu-latest
 
     steps:
