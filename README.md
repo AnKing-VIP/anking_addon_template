@@ -1,20 +1,21 @@
 <b>This add-on was funded by the Anki Palace. Please consider supporting our work using the links below so we can continue to fund add-on projects like this.</b>
+<b>This add-on was funded by the [AnKing Memberships](https://www.ankipalace.com/memberships). Please consider supporting us so we can continue to fund add-on projects like this.</b>
 
 You must be on Anki *** to use this add-on
 
-*** Add-on description
+## How to Use
+***
 
-<div><b>Screenshots</b></div>
-<img src="https://raw.githubusercontent.com/ankipalace/anki-field-autocomplete/master/screenshots/dropdown.gif?raw=true">
-  <br>
+## Screenshots
+<img src="https://raw.githubusercontent.com/AnKingMed/anki-set-ease/master/screenshots/EditEase.gif?raw=true">
   <br>
 
-<b>Problems, Bugs, Errors, Improvements</b>
+## Problems, Bugs, Errors, Improvements
 If you find a serious bug, please submit it on <a href="https://github.com/ankipalace/" rel="nofollow">Github</a> or email us at ankingmed@gmail.com. Please remember that we are not coders and thus may not be able to provide support.
 
-<b>Changelog:</b>
+## Changelog:
   <br>
-2021***: Initial Release
+2021-*****: Initial Release
 
 
 ### If you like these, please consider donating to this project
