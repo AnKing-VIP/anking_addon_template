@@ -1,19 +1,36 @@
+from pathlib import Path
 from typing import Tuple
-from aqt.qt import *
+
+from aqt.qt import (
+    QCursor,
+    QDir,
+    QHBoxLayout,
+    QIcon,
+    QLabel,
+    QPixmap,
+    QSize,
+    QSizePolicy,
+    Qt,
+    QToolButton,
+    QVBoxLayout,
+    QWidget,
+)
 from aqt.utils import openLink
+
+QDir.addSearchPath("icons", f"{Path(__file__).parent.parent}/resources")
 
 
 def icon_button(icon_data: Tuple[str, Tuple[int, int], str]) -> QToolButton:
     (image, size, url) = icon_data
-    icon = QIcon(QPixmap(f":/AnKing/{image}"))
+    icon = QIcon(QPixmap(f"icons:{image}"))
     button = QToolButton()
     button.setIcon(icon)
     button.setIconSize(QSize(size[0], size[1]))
-    button.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-    button.setCursor(QCursor(Qt.PointingHandCursor))
+    button.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+    button.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
     button.setAutoRaise(True)
     button.setToolTip(url)
-    button.clicked.connect(lambda _, url=url: openLink(url))
+    button.clicked.connect(lambda _, url=url: openLink(url))  # type: ignore
     return button
 
 
@@ -69,3 +86,26 @@ class AnkiPalaceLayout(QHBoxLayout):
         )
         text_layout.addWidget(label1)
         text_layout.addWidget(label2)
+
+
+class GithubLinkLayout(QHBoxLayout):
+    def __init__(self, parent: QWidget, href: str) -> None:
+        self.href = href
+
+        QHBoxLayout.__init__(self, parent)
+        self.setContentsMargins(0, 0, 0, 0)
+        self.setup()
+        parent.setLayout(self)
+
+    def setup(self) -> None:
+        self.addStretch()
+        text_layout = QVBoxLayout()
+        self.addLayout(text_layout)
+        self.addStretch()
+
+        label = QLabel()
+        label.setText(
+            f'You can report bugs and request features <a href="{self.href}">here</a>.'
+        )
+        label.setOpenExternalLinks(True)
+        text_layout.addWidget(label)
