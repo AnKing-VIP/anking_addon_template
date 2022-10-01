@@ -3,8 +3,8 @@ tools/
 profile/
 meta.json
 
-src/*/gui/forms/anki*
-src/*/gui/resources/anki*
+src/*/gui/forms
+src/*/gui/resources
 
 __pycache__/
 .cache
