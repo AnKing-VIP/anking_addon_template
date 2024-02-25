@@ -1,4 +1,3 @@
-<b>This add-on was funded by the Anki Mastery Course. Please consider supporting our work using the links below so we can continue to fund add-on projects like this.</b>
 <b>This add-on was funded by the [AnKing VIP](https://www.theanking.com/vip). Please consider supporting us so we can continue to fund add-on projects like this.</b>
 
 You must be on Anki *** to use this add-on
