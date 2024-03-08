@@ -19,6 +19,7 @@ jobs:
     steps:
     - uses: actions/stale@v9
       with:
+        repo-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
         stale-issue-message: 'Hello 👋, this issue has been opened for more than 3 months with no activity on it. It will closed automatically after 7 days if there are no new comments.'
         stale-pr-message: 'Hello 👋, this PR has had no activity for more than 2 weeks and needs a reply from the author. If you think this is a mistake please comment and ping a maintainer to get this merged ASAP! Thanks for contributing! You have 7 days until this gets closed automatically'
         exempt-issue-labels: 'Keep Open'
