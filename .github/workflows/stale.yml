@@ -1,0 +1,29 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "0 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  stale:
+
+    permissions:
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/stale@v9
+      with:
+        stale-issue-message: 'Hello 👋, this issue has been opened for more than 3 months with no activity on it. It will closed automatically after 7 days if there are no new comments.'
+        stale-pr-message: 'Hello 👋, this PR has had no activity for more than 2 weeks and needs a reply from the author. If you think this is a mistake please comment and ping a maintainer to get this merged ASAP! Thanks for contributing! You have 7 days until this gets closed automatically'
+        exempt-issue-labels: 'Keep Open'
+        exempt-pr-labels: 'Keep Open'
+        close-issue-reason: 'not_planned'
+        days-before-issue-stale: 90
+        days-before-pr-stale: 14
+        only-labels: 'Needs more info'
+        only-pr-labels: 'Needs Author Reply'
