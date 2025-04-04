@@ -1,0 +1,6 @@
+[MASTER]
+extension-pkg-whitelist=PyQt6,PyQt5
+ignore = venv
+
+[REPORTS]
+output-format=colorized
